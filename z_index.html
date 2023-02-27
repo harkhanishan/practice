@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        #box1{
+            background-color: rgba(255,0,0,0.8);
+            border: 3px solid red;
+            border-radius: 7px;
+            position: relative;
+            z-index: 12;
+        }
+        #box2{
+            background-color: rgba(0, 128, 0, 0.8);
+            border: 3px solid green;
+            border-radius: 7px;
+            position: relative;
+            top: 40px;
+            left: 40px;
+            /*z-index: 4;*/
+        }
+        #box2 div{
+            position: relative;
+            z-index: -3;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <!--<div class="box" id="box2"><span>Hello</span></div>-->
+    <div class="box" id="box2"><div>Hello</div></div>
+</body>
+</html>
+<!--if i apply parent container =7 and child container with 3 child container won't go behind,
+but if i apply child container with - value it will why is that???-->
+<!--and also why is that when you apply - value to child container it is necessary for parent to not 
+have any z-index property.-->
